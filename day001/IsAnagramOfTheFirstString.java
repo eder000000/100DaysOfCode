@@ -6,8 +6,6 @@ package day001;
 
 import java.util.HashMap;
 
-
-
 public class IsAnagramOfTheFirstString {
 	static String firstWord = "sergio";
 	static String secondWord = "riesgo";
@@ -63,12 +61,5 @@ public class IsAnagramOfTheFirstString {
 			}
 		}
 		return container;
-	}
-	
-	
-	public static void printArray(char[] word) {
-		for(char item : word) {
-			System.out.println(item);
-		}
 	}
 }
