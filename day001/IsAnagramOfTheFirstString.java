@@ -7,7 +7,7 @@ package day001;
 import java.util.HashMap;
 
 public class IsAnagramOfTheFirstString {
-	static String firstWord = "sergio";
+	static String firstWord = "sergiox";
 	static String secondWord = "riesgo";
 	static HashMap <Character, Integer> firstContainer = new HashMap<>();
 	static HashMap <Character, Integer> secondContainer= new HashMap<>();
