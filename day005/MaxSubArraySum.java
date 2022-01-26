@@ -2,9 +2,10 @@
 //and a number called n. The function should calculate 
 //the maximum sum of n consecutive elements in the array.
 
+//
 package day005;
 
-
+// O(n^2)
 public class MaxSubArraySum {
 	
 	static int[] givenArray = {4, 2, 1, 6, 2};
