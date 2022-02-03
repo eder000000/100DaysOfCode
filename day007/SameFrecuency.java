@@ -7,48 +7,71 @@ import java.util.List;
 //integers, find out if the two numbers have the same
 //frecuency.
 
-public class SameFrecuency {
-	
+public class SameFrecuency {	
 	public static void main(String[] args) {
-		
-		System.out.println(sameFrecuency(182, 281));
+		System.out.println("Change int to String");
+		System.out.println(sameFrecuency(182, 821));
 		System.out.println(sameFrecuency(34, 14));
 		System.out.println(sameFrecuency(3589578, 5879385));
 		System.out.println(sameFrecuency(22, 222));
-		}
+		
+		System.out.println("Working with int");
+		System.out.println(sameFrecuencyAltern(182, 821));
+		System.out.println(sameFrecuencyAltern(34, 14));
+		System.out.println(sameFrecuencyAltern(3589578, 5879385));
+		System.out.println(sameFrecuencyAltern(22, 222));
+	}
 	
-	public static boolean sameFrecuency(int num1, int num2) {
-		//change int type to string type
-		String numOneToString = Integer.toString(num1);
-		String numTwoToString = Integer.toString(num2);
-		//declare two arrays that will hold counts for each digit
-	    int[] counterOne = new int[10];
-	    int[] counterTwo = new int[10];
+	public static boolean sameFrecuency(int firstNumber, int secondNumber ) {
+		//Chnge int to String
+		String firstNumberString = Integer.toString(firstNumber);
+		String secondNumberString = Integer.toString(secondNumber);
+	    int[] firstScoreBoard = new int[10];
+		int[] secondScoreBoard = new int[10];
 		
-		System.out.println(numOneToString);
-		System.out.println(numTwoToString);
 		
-		//if numbers are different length then is false
-		if(numOneToString.length() != numTwoToString.length()) {
+		//if numbers lenght are different the return false
+		if(firstNumberString.length() != secondNumberString.length()) {
 			return false;
 		}
+		
+		//add 1 to index represented by digit
+		for(int i = 0; i < firstNumberString.length(); i++) {
+			firstScoreBoard[Character.getNumericValue(firstNumberString.charAt(i))] += 1; 
+					
+		}
+		
+		for(int j = 0; j < firstNumberString.length(); j++) {
+			secondScoreBoard[Character.getNumericValue(secondNumberString.charAt(j))] += 1;
+		}
+		
+		//check if two arrays are equals
+		for(int index : firstScoreBoard) {
+			if(firstScoreBoard[index] != secondScoreBoard[index]) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
-		//add 1 to each digit represented as index in the array (scoreboard)
-		for(int i = 0; i < numOneToString.length(); i++) {
-			//change from String to int
-			counterOne[Character.getNumericValue(numOneToString.charAt(i))] += 1;
+	
+	
+	public static boolean sameFrecuencyAltern(int firstNumber, int secondNumber) {
+		int[] firstScoreBoardAltern = new int[10];
+		int[] secondScoreBoardAltern = new int[10];
+		
+		while(firstNumber > 0) {
+			firstScoreBoardAltern[firstNumber % 10] += 1; 
+			firstNumber /= 10;
 		}
 		
-		for(int j = 0; j < numOneToString.length(); j++) {
-			counterTwo[Character.getNumericValue(numTwoToString.charAt(j))] += 1;
+		while(secondNumber > 0) {
+			secondScoreBoardAltern[secondNumber % 10] += 1;
+			secondNumber /= 10;
 		}
 		
-//		System.out.println(Arrays.toString(counterOne));
-//		System.out.println(Arrays.toString(counterTwo));
-		
-		//check if both arrays have the same values
-		for(int key : counterOne) {
-			if(counterOne[key] != counterTwo[key]) {
+		for(int item : firstScoreBoardAltern) {
+			if(firstScoreBoardAltern[item] != secondScoreBoardAltern[item]) {
 				return false;
 			}
 		}
