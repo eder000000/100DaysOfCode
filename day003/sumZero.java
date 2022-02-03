@@ -8,7 +8,7 @@ package day003;
 import java.util.Arrays;
 
 public class sumZero {
-	static int[] arrayOfIntegers = { -10, -5,  -3, -2, -1, 0, 4,  6, 7, 9};
+	static int[] arrayOfIntegers = { -10, -3, -2, -1, 0, 3, 5, 10};
 	static int[] result = {0, 0};
 	
 	public static void main(String[] args) {

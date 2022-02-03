@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class CountUniqueValues {
 
-	static int[] arrayGiven = {-2, -1, -1, 0, 1 };
+	static int[] arrayGiven = {-10, -3, -2, -1, 0, 3, 5, 10 };
 	static int numOfUniqueValues = 0;
 	
 	public static void main(String... args) {

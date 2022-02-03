@@ -9,7 +9,7 @@ package day005;
 public class MaxSubArraySum {
 	
 	static int[] givenArray = {4, 2, 1, 6, 2};
-	static int numOfElementsToSum = 4;
+	static int numOfElementsToSum = 2;
 
 	
 	public static void main(String... args) {
