@@ -26,13 +26,19 @@ public class ReversedSequence {
 	
 	public static int[] reverse(int num) {
 		int[] array = new int[num];
-		int counter = 0;
+//		int counter = 0;
 		
-		for(int i = num ; i > 0; i--) {
-			array[counter] = num;
-			counter++;
-			num--;
+//		for(int i = num ; i > 0; i--) {
+//			array[counter] = num;
+//			counter++;
+//			num--;
+//		}
+
+		//No need for temp variables
+		for(int i = 0; i < array.length; i++) {
+			array[i] = array.length - i;
 		}
+		
 		return array;
 	}
 }
