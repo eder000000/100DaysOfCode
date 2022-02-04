@@ -28,7 +28,7 @@ public class ReversedSequence {
 		int[] array = new int[num];
 		int counter = 0;
 		
-		for(int i = num - 1; i >= 0; i--) {
+		for(int i = num ; i > 0; i--) {
 			array[counter] = num;
 			counter++;
 			num--;
