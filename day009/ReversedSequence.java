@@ -3,6 +3,7 @@ package day009;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class ReversedSequence {
 	static Scanner scan = new Scanner(System.in);
@@ -17,6 +18,7 @@ public class ReversedSequence {
 			}
 			System.out.println(num);
 			System.out.println(Arrays.toString(reverse(num)));
+			System.out.println(Arrays.toString(reverseVersionTwo(num)));
 			
 		}catch (Exception e){
 				System.out.println(" Number must be greather than 0.");
@@ -39,6 +41,10 @@ public class ReversedSequence {
 		}
 		
 		return array;
+	}
+	
+	public static int[] reverseVersionTwo(int num) {
+		return IntStream.range(-num, 0).map(Math::abs).toArray();
 	}
 }
 
