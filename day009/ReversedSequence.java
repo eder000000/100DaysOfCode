@@ -18,8 +18,7 @@ public class ReversedSequence {
 			System.out.println(num);
 			System.out.println(Arrays.toString(reverse(num)));
 			
-		}
-			catch (Exception e){
+		}catch (Exception e){
 				System.out.println(" Number must be greather than 0.");
 			} 
 	}
@@ -42,3 +41,5 @@ public class ReversedSequence {
 		return array;
 	}
 }
+
+
