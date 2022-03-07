@@ -1,0 +1,15 @@
+package day015;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Test;
+
+
+public class ContainerWithMostWaterTest {
+	int[] arrayTestOne = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+
+	@Test
+	public void TestContainerOne(){
+		assertEquals(49, ContainerWithMostWater.maxArea(arrayTestOne));
+	}
+}
